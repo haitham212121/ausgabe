@@ -37,7 +37,7 @@ export default function Expenses() {
   useEffect(() => { if (showAdd && inputRef.current) inputRef.current.focus() }, [showAdd])
 
   const addExp = () => {
-    if (!newAmount || parseFloat(newAmount) <= 0) return
+    if (!newAmount || parseFloat(newAmount) <= 0 || !newCat) return
     setExpenses(prev => [{ id: Date.now(), amount: parseFloat(newAmount), category: newCat, note: newNote.trim(), date: newDate, type: newType }, ...prev])
     resetForm()
   }
@@ -47,7 +47,7 @@ export default function Expenses() {
   const startEdit = (exp) => { setEditExp(exp); setNewAmount(exp.amount.toString()); setNewCat(exp.category); setNewNote(exp.note); setNewDate(exp.date); setNewType(exp.type); setShowAdd(true) }
 
   const saveEdit = () => {
-    if (!newAmount || !editExp) return
+    if (!newAmount || parseFloat(newAmount) <= 0 || !newCat || !editExp) return
     setExpenses(prev => prev.map(e => e.id === editExp.id ? { ...e, amount: parseFloat(newAmount), category: newCat, note: newNote.trim(), date: newDate, type: newType } : e))
     resetForm()
   }

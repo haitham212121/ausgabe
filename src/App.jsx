@@ -16,11 +16,13 @@ function App() {
     <LangContext.Provider value={{ lang, tr, setLang }}>
       <HashRouter>
         <div dir={tr.dir} className="min-h-screen bg-[#0a0a0f] text-white">
-          <Routes>
-            <Route path="/" element={<Hub />} />
-            <Route path="/aufgaben" element={<TaskManager />} />
-            <Route path="/ausgaben" element={<Expenses />} />
-          </Routes>
+          <div className="max-w-md mx-auto">
+            <Routes>
+              <Route path="/" element={<Hub />} />
+              <Route path="/aufgaben" element={<TaskManager />} />
+              <Route path="/ausgaben" element={<Expenses />} />
+            </Routes>
+          </div>
         </div>
       </HashRouter>
     </LangContext.Provider>

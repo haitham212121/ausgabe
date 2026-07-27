@@ -69,6 +69,8 @@ export const translations = {
     // Days
     days: ['الأحد', 'الإثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة', 'السبت'],
     months: ['يناير', 'فبراير', 'مارس', 'أبريل', 'مايو', 'يونيو', 'يوليو', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر'],
+    logout: 'تسجيل الخروج',
+    logOut: 'تسجيل الخروج'
   },
   de: {
     dir: 'ltr',
@@ -117,6 +119,19 @@ export const translations = {
     expense: 'Ausgabe',
     balance: 'Bilanz',
     categories: 'Kategorien',
+    overview: 'Übersicht',
+    totalExpenses: 'Ausgaben',
+    addEntry: 'Neuer Eintrag',
+    editEntry: 'Eintrag bearbeiten',
+    amount: 'Betrag *',
+    date: 'Datum',
+    note: 'Notiz',
+    notePlaceholder: 'Optional',
+    budgets: 'Monatsbudgets',
+    monthlyChart: 'Monatsverlauf',
+    topExpenses: 'Top Ausgaben',
+    allEntries: 'Alle Einträge',
+    charts: 'Diagramme',
     monthlyChart: 'Monatsverlauf',
     topExpenses: 'Top Ausgaben',
     allEntries: 'Alle Einträge',
@@ -140,6 +155,8 @@ export const translations = {
     // Days
     days: ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'],
     months: ['Jan', 'Feb', 'Mär', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez'],
+    logout: 'Abmelden',
+    logOut: 'Abmelden'
   },
 }
 

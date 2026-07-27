@@ -82,6 +82,22 @@ export default function Hub() {
           <div className="w-2 h-2 rounded-full bg-[#22c55e] animate-pulse" />
           <span className="text-sm text-[#6b7280]">Online</span>
         </div>
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={() => {
+            localStorage.clear();
+            window.location.reload();
+          }}
+          className="px-4 py-2 rounded-xl bg-[#111118] border border-[#1e1e2a] hover:bg-[#1a1a24] transition-all flex items-center gap-2"
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+            <polyline points="16,17 21,12 16,7"/>
+            <line x1="21" y1="12" x2="9" y2="12"/>
+          </svg>
+          <span className="text-sm text-[#6b7280]">{tr.logOut || tr.logout || 'Logout'}</span>
+        </motion.button>
       </motion.div>
     </div>
   )
